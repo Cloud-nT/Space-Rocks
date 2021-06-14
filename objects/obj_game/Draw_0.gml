@@ -14,13 +14,12 @@ switch(room){
 		draw_text(
 			room_width/2, 200,
 			@"Score 1,000 points to win!
-			
-			Up: move
-			Left/Right: change direction
-			Space/z/x: shoot
-			
-			>>Press Enter To Start<<
-			"
+
+Up: move
+Left/Right: change direction
+Space/z/x: shoot
+
+>>Press Enter To Start<<"
 		);
 		draw_set_halign(fa_left);
 		break;
@@ -40,6 +39,7 @@ switch(room){
 		break;
 		
 	case rm_gameover:
+		audio_stop_sound(snd_background);
 		draw_set_halign(fa_center);
 		var c = c_red;
 		draw_text_transformed_color(
